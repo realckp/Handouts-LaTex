@@ -1,0 +1,108 @@
+\documentclass{article}
+%
+\usepackage{amsmath}
+\usepackage{titling}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[margin=1.5cm]{geometry}
+%
+\title{Partial Fraction Decomposition Example Problem}
+\setlength{\droptitle}{-1em}
+%
+\date{}
+%
+\pagenumbering{gobble}
+%
+\begin{document}
+%
+	\maketitle
+%
+	\[\frac{7x-23}{(x-2)(x+5)} = \frac{A}{(x-2)} + \frac{B}{(x+5)}\] \\ \\
+%
+	With Partial Fraction Decomposition, we assume that a rational expression can be decomposed as the sum of smaller rational expressions. In this example, we assume it can be decomposed such that each factor in the denominator of the orignial expression will be the denominator of one of the constituent expressions. This leaves their numerators unknown, which we will call $A$ and $B$. On the back is a chart showing how different rational expressions are decomposed.
+%
+	\begin{align*}
+%
+		\frac{7x-23}{(x-2)(x+5)} &= \frac{A}{(x-2)}\cdot\frac{(x+5)}{(x+5)} + \frac{B}{(x+5)}\cdot\frac{(x-2)}{(x-2)} \\ \\
+%
+		\frac{7x-23}{(x-2)(x+5)} &= \frac{Ax+5A+Bx-2B}{(x-2)(x+5)} \\ \\
+%
+		7x-23 &= Ax+5A+Bx-2B
+%
+	\end{align*}
+%
+	Next, we combine our terms on the right hand side of the equation, then simplify. We then collect ``like terms," creating a system of equations. We then solve for $A$ and $B$ through any means necessary (eliminations, substitution, Gauss-Jordan, etc.). In this example we will use substitution. 
+%
+	\[
+%
+		\begin{cases}
+%
+			7x = Ax+Bx \\
+			23 = 5A-2B \\
+%
+		\end{cases}
+%
+	\]
+%
+	\begin{align*}
+%
+		7x = Ax+Bx &\Rightarrow A = 7-B \\
+%
+		-23 = 5A-2B &\Rightarrow -23 = 5(7-B)-2B \\
+%
+		&\Rightarrow B = \frac{58}{7} \\
+%
+		&\Rightarrow A = 7-\frac{58}{7} = -\frac{9}{7} \\
+%
+	\end{align*}
+%
+	Once we have our values for $A$ and $B$, we substitute them into the decomposition and simplify.
+%
+	\[
+%
+		\begin{split}
+%
+			\frac{7x-23}{(x-2)(x+5)} &= \frac{A}{(x-2)} + \frac{B}{(x+5)} \\ \\
+%
+			&= \frac{(-9/7)}{(x-2)} + \frac{(58/7)}{(x+5)} \\ \\
+%
+			&= -\frac{9}{7(x-2)}+\frac{58}{7(x+5)}
+%
+		\end{split}
+%
+	\]
+%
+	\newpage
+%
+	Your first step should \emph{always} be to factor and simplify your expression. How the expression is decomposed will then depend on the \emph{denominator}. Please note that this is not an exhaustive list of possible combinations but a quick reference chart. Other combinations follow a pattern like the \emph{Product of Linear and Irreducible Quadratic Factors} (i.e. sum the decompositions). \\ \\
+%
+	\begin{center}
+%
+		\renewcommand{\arraystretch}{2}
+		\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X | >{\centering\arraybackslash}X | >{\centering\arraybackslash}X |}
+%
+			\hline
+			Type & Denominator & Decomposition \\
+			\hline
+			\hline
+%
+			Product of Linear Factors & $(x-d_1)\cdot(x-d_2)\cdot...\cdot(x-d_n)$ & $\frac{A_1}{(x-d_1)}+\frac{A_2}{(x-d_2)}+...+\frac{A_n}{(x-d_n)}$ \\
+			\hline				
+%
+			Product of \emph{Irreducible} Quadratic Factors & $(a_{1}x^{2}+b_{1}x+c_{1})\cdot(a_{2}x^2+b_{2}x+c_{2})\cdot...\cdot(a_{n}x^{2}+b_{n}x+c_{n})$ & $\frac{B_{1}x+C_{1}}{(a_{1}x^{2}+b_{1}x+c_{1})}+\frac{B_{2}x+C_{2}}{(a_{2}x^{2}+b_{2}x+c_{2})}+...+\frac{B_{n}x+C_{n}}{(a_{n}x^{2}+b_{n}x+c_{n})}$ \\
+			\hline
+%
+			Product of Linear \emph{and} Irreducible Quadratic Factors & $(x-d_1)\cdot(x-d_2)\cdot...\cdot(x-d_n)\cdot(a_{1}x^{2}+b_{1}x+c_{1})\cdot(a_{2}x^2+b_{2}x+c_{2})\cdot...\cdot(a_{k}x^{2}+b_{k}x+c_{k})$ & $\frac{A_1}{(x-d_1)}+\frac{A_2}{(x-d_2)}+...+\frac{A_n}{(x-d_n)}+\frac{B_{1}x+C_{1}}{(a_{1}x^{2}+b_{1}x+c_{1})}+\frac{B_{2}x+C_{2}}{(a_{2}x^{2}+b_{2}x+c_{2})}+...+\frac{B_{k}x+C_{k}}{(a_{k}x^{2}+b_{k}x+c_{k})}$ \\
+			\hline
+%
+			Repeated Linear Factors & $(x-d)^{n}$ & $\frac{A_{1}}{(x-d)^{1}}+\frac{A_{2}}{(x-d)^{2}}+...+\frac{A_{n}}{(x-d)^{n}}$ \\
+			\hline
+%
+			Repeated Irreducible Quadratic Factors & $(ax^{2}+bx+c)^{n}$ & $\frac{B_{1}x+C_{1}}{(ax^{2}+bx+c)^{1}}+\frac{B_{2}x+C_{2}}{(ax^{2}+bx+c)^{2}}+...+\frac{B_{n}x+C_{n}}{(ax^{2}+bx+c)^{n}}$ \\
+			\hline
+%
+		\end{tabularx}
+%
+	\end{center}
+%
+\end{document}

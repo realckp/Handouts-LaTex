@@ -1,0 +1,218 @@
+\documentclass{article} % using article as the default for now, may come back later
+%
+% insert needed packages here, e.g. \usepackage{geometry}
+\usepackage{multirow}
+\usepackage{amsmath}
+%
+\title{Units And Prefixes}
+%\author{Edward Kizer-Pugh}
+\date{} % keeps date blank
+\pagenumbering{gobble} % supresses page numbering
+%
+\begin{document}
+%
+	\maketitle
+	\vspace{-2cm} % reduce spacing b/w title and body to fit on one page
+%	
+	\begin{center}
+%
+		\begin{tabular}{| c | c | c |}
+%
+			\hline
+			 & Standard International & U.S. Customary \\
+			\hline
+			\hline
+%
+			length & meter (m) & foot (ft) \\
+			\hline
+%
+			time & second (s) & second (s) \\
+			\hline
+%
+			mass & kilogram (kg) & pound [mass] (lb) \\
+			\hline
+%
+			velocity & meters per second (m$/$s) & feet per second (ft$/$s) \\
+			\hline
+%
+			acceleration & meters per second squared (m$/$s$^2$) & feet per second squared (ft$/$s$^2$) \\
+			\hline
+%			
+			force & Newtons (N $=$ kg $*$ m$/$s$^2$) & pounds [force] (lbf $=$ lb $*$ ft$/$s$^2$)  \\
+			\hline
+%
+			work & Joules (J $=$ N $*$ m) & foot pounds (ft$*$lbf) \\
+			\hline
+%
+			energy & Joules (J $=$ N $*$ m) & foot pounds (ft$*$lbf) \\
+			\hline
+%
+			power & Watts (W $=$ J$/$s) & horse power (hp) \\
+			\hline
+%
+		\end{tabular}
+%		
+	\end{center}
+%
+	\begin{center}
+%
+		\begin{tabular}{| c | c |}
+%
+			\hline
+			\multicolumn{2}{| c |}{Unit Conversion} \\
+			\hline
+			\hline
+%
+			\multirow{3}{4em}{length} & $1$ m $=$ $3.281$ ft \\
+			\cline{2-2}
+%
+			& $1$ yard $=$ $3$ ft \\
+			\cline{2-2}
+%
+			& $1$ mile $=$ $5280$ ft \\
+			\hline
+%
+			\multirow{4}{4em}{mass} & $1$ kg $=$ $2.205$ lb \\
+			\cline{2-2}
+%
+			& $1$ lb $=$ $16$ oz \\
+			\cline{2-2}
+%
+			& $1$ ton $=$ $2000$ lb \\
+			\cline{2-2}
+%
+			& $1$ metric ton $=$ $1000$ kg \\
+			\hline
+%
+			force & $1$ N $=$ $0.2248$ lbf \\
+			\hline
+%
+			work & $1$ J $=$ $0.7376$ lbf$*$ft\\
+			\hline
+%
+			\multirow{2}{4em}{energy} & $1$ J $=$ $0.7376$ lbf$*$ft \\
+			\cline{2-2}
+%
+			& $1$ J $=$ $0.000239$ Cal [kcal] \\
+			\hline
+%
+			power & $1$ W $=$ $0.001341$ hp \\
+			\hline
+%
+		\end{tabular}
+%
+	\end{center}
+%
+	\begin{center}
+%
+		\textbf{\underline{Example Conversion Problem}} \\
+		\underline{Convert $6.3$ ft$/$s to m$/$s}
+%
+	\end{center}
+%
+	\[
+%
+		6.3 \text{ ft}/\text{ s} = \frac{6.3 \text{ ft}}{1 \text{ s}}  = \frac{6.3*1\text{ ft}}{1\text{ s}}
+%
+	\]
+%
+	\begin{center}
+%
+		($1$ m $=$ $3.281 * 1$ ft, so $0.305 * 1$ m $=$ $1$ ft, which can be substituted) \\
+%
+	\end{center}
+%
+	\[
+%
+		\frac{6.3 * 1 \text{ ft}}{1 \text{ s}} = \frac{6.3*0.305*1 \text{ m}}{1 \text{ s}} = \frac{1.922 \text{ m}}{1 \text{ s}} = 1.922\text{ m}/\text{s}
+%
+	\]
+%
+	\newpage
+%
+	\begin{center}
+%
+		\begin{tabular}{| c | c | c |}
+%		
+			\hline
+			\multicolumn{3}{| c |}{S.I. Unit Prefixes} \\
+			\hline
+			\hline
+%
+			prefix & meaning & Example \\
+			\hline
+%		
+			nano- (n-) & $10^{-9}$, ``billionth" & $1$ nm $=$ $10^{-9} * 1$ m \\
+			\hline
+%
+			micro- ($\mu$-) & $10^{-6}$, ``millionth" & $1$ $\mu$m $=$ $10^{-6}*1$ m \\
+			\hline
+%
+			milli- (m-) & $10^{-3}$, ``thousandth" & $1$ mm $=$ $10^{-3}*1$ m \\
+			\hline
+%
+			centi- (c-) & $10^{-2}$, ``hundredth" & $1$ cm $=$ $10^{-2}*1$ m \\
+			\hline
+%
+			deci- (d-) & $10^{-1}$, ``tenth" & $1$ dm $=$ $10^{-1}*1$ m \\
+			\hline
+%
+			kilo- (k-) & $10^3$, ``thousand" & $1$ km $=$ $10^3*1$ m \\
+			\hline
+%
+			mega- (M-) & $10^6$, ``million" & $1$ Mm $=$ $10^6*1$ m \\
+			\hline
+%
+			giga- (G-) & $10^9$, ``billion" & $1$ Gm $=$ $10^9*1$ m \\
+			\hline
+%
+			tera- (T-) & $10^12$, ``trillion" & $1$ Tm $=$ $10^12*1$ m \\
+			\hline
+%
+		\end{tabular}
+%
+	\end{center}
+%
+	\begin{center}
+%
+		\textbf{\underline{Example Conversion Problem}} \\
+		\underline{Convert $65.2$ mm to nm}
+%
+	\end{center}
+%
+	\[
+%		
+		\begin{split}
+%
+			65.2 \text{ mm} &= 65.2 * 1 \text{ mm } \\
+					&= 65.2 * 10^{-3} * 1 \text{ m }\\
+%
+		\end{split}
+%
+	\]
+%
+	\begin{center}
+%
+		($1$ nm $=$ $10^{-6} * 1$ m, so $10^6 * 1$ nm $=$ $1$ m, which can be substituted) \\
+%
+	\end{center}
+%
+	\[
+%			
+		\begin{split}
+%	
+			65.2 * 10^{-3} * 1 \text{ m } &= 65.2 * 10^{-3} * 10^6 * 1 \text{ nm } \\
+						      &= 65.2 * 10^3 \text{ nm } \\
+						      &= 65200 \text{ nm }
+%
+		\end{split}
+%
+	\]
+%
+	\begin{center}
+%
+		Note, this is \emph{one} way to solve this problem, notably without explicit use of conversion factors.
+%
+	\end{center}
+%
+\end{document}
